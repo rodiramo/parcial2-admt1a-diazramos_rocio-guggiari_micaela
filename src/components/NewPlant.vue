@@ -36,9 +36,10 @@
 export default {
   name: "NewPlant",
   components: "",
-  props: {},
+  props:"plant",
   data() {
     return {
+
       plant: {
         newName: "",
         newLocation: "",
