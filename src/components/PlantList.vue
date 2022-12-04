@@ -2,20 +2,20 @@
   <div id="plants" class="mb-5 mt-5">
     <h2 class="text-center mb-3">My Plants</h2>
     <div class="container text-center">
-      <new-plant @create-new-plant="add"></new-plant>
       <div class="row">
         <!--plant item-->
         <plant-item
-          v-for="(plant, index) in plants"
-          v-bind:key="index"
-          v-bind:index="index"
-          v-bind:name="plant.name"
-          v-bind:location="plant.location"
-          v-bind:description="plant.description"
-          @delete-plant="deletePlant(index)"
+        v-for="(plant, index) in plants"
+        v-bind:key="index"
+        v-bind:index="index"
+        v-bind:name="plant.name"
+        v-bind:location="plant.location"
+        v-bind:description="plant.description"
+        @delete-plant="deletePlant(index)"
         >
-        </plant-item>
-      </div>
+      </plant-item>
+    </div>
+    <new-plant @create-new-plant="add()"></new-plant>
     </div>
   </div>
 </template>
@@ -56,7 +56,7 @@ export default {
     };
   },
   mounted() {
-    this.getFromLocalStorage();
+//    this.getFromLocalStorage();
   },
   methods: {
     deletePlant(index) {
@@ -74,7 +74,7 @@ export default {
       if (validate) {
         this.plants.push(plant);
       }
-      this.saveToLocalStorage();
+  //    this.saveToLocalStorage();
     },
     //  createNewPlant(plant) {
     //    // adds a new plant to the array
@@ -98,13 +98,13 @@ export default {
     //      }
     //    });
 
-    getFromLocalStorage() {
-      if (localStorage.plants)
-        this.plants = JSON.parse(localStorage.getItem("plants"));
-    },
-    saveToLocalStorage() {
-      localStorage.setItem("plants", JSON.stringify(this.plants));
-    },
+  //  getFromLocalStorage() {
+  //    if (localStorage.plants)
+  //      this.plants = JSON.parse(localStorage.getItem("plants"));
+  //  },
+  //  saveToLocalStorage() {
+  //    localStorage.setItem("plants", JSON.stringify(this.plants));
+  //  },
   },
 };
 </script>
