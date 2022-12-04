@@ -64,13 +64,11 @@ export default {
       this.plants.splice(index, 1);
     },
     add() {
-    
-      let plant = {
+        let plant = {
         name: this.name,
         location: this.location,
         description: this.description,
-    
-      };
+          };
     // let validate = this.validatePlantForm();
      // if (validate) {
         this.plants.push(plant);

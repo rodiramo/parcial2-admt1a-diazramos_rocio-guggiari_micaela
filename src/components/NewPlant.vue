@@ -49,7 +49,8 @@ export default {
   },
   methods: { emitCreatePlant() {
       this.$emit("create-new-plant");
-    },},
+    },
+  },
   computed: {},
 };
 </script>
