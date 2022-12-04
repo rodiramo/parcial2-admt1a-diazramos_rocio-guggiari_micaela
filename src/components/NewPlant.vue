@@ -39,7 +39,6 @@ export default {
   props:"plant",
   data() {
     return {
-
       plant: {
         newName: "",
         newLocation: "",
