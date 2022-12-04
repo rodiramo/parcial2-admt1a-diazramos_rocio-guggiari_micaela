@@ -36,15 +36,14 @@
 export default {
   name: "NewPlant",
   components: "",
-  props: {},
+  props:"plant",
   data() {
     return {
-      plant: {
-        name: "",
-        location: "",
-        description: "",
+      name: "",
+      location: "",
+      description: "",
      //   selected: "",
-      },
+      
     };
   },
   methods: { emitCreatePlant() {

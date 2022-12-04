@@ -8,6 +8,7 @@
         v-for="(plant, index) in plants"
         v-bind:key="index"
         v-bind:index="index"
+        v-bind:img="`./assets/${plant.img}`"
         v-bind:name="plant.name"
         v-bind:location="plant.location"
         v-bind:description="plant.description"
@@ -36,18 +37,21 @@ export default {
       plants: [
         {
           id: 1,
+          img: ".../assets/planta-lavanda.jpg",
           name: "Lavender",
           location: "The bedroom",
           description: "Next to the bed",
         },
         {
           id: 2,
+          img:".../assets/planta-orquidea.jpg",
           name: "Orchid",
           location: "Kitchen",
           description: "Next to the spice rack",
         },
         {
           id: 3,
+          img:".../assets/planta-ficus.jpg",
           name: "The Big One",
           location: "Livingroom",
           description: "Next to the speaker",
@@ -68,7 +72,7 @@ export default {
         name: this.name,
         location: this.location,
         description: this.description,
-          };
+        };
     // let validate = this.validatePlantForm();
      // if (validate) {
         this.plants.push(plant);
