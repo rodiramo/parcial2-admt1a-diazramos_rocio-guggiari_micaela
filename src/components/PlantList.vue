@@ -15,14 +15,13 @@
         >
       </plant-item>
     </div>
-    <new-plant @create-new-plant="add()"></new-plant>
+    <new-plant @create-new-plant="add"></new-plant>
     </div>
   </div>
 </template>
 
 <script>
 import PlantItem from "./PlantItem";
-
 import NewPlant from "./NewPlant";
 
 export default {
@@ -63,16 +62,16 @@ export default {
       console.log(index);
       this.plants.splice(index, 1);
     },
-    add() {
-        let plant = {
-        name: this.name,
-        location: this.location,
-        description: this.description,
-          };
-    // let validate = this.validatePlantForm();
-     // if (validate) {
-        this.plants.push(plant);
-    //  }
+    add(plant) {
+        let newPlant = {
+        name: plant.newName,
+        location: plant.newLocation,
+        description: plant.newDescription,
+            };
+        if (newPlant.name.length > 0) {
+        this.plants.push(newPlant);
+       // this.saveToLocalStorage();
+      }
     alert('hello');
     },
   //    this.saveToLocalStorage();

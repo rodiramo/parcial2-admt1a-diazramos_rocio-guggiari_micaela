@@ -87,7 +87,6 @@ export default {
   background: #b9d4d4;
   font-size: 1.35rem;
   padding: 1rem;
-
   border-radius: 2rem;
 }
 </style>
