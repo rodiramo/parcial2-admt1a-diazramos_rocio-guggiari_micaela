@@ -64,18 +64,20 @@ export default {
       this.plants.splice(index, 1);
     },
     add() {
+    
       let plant = {
         name: this.name,
         location: this.location,
         description: this.description,
-        selected: this.selected,
+    
       };
-      let validate = this.validatePlantForm();
-      if (validate) {
+    // let validate = this.validatePlantForm();
+     // if (validate) {
         this.plants.push(plant);
-      }
-  //    this.saveToLocalStorage();
+    //  }
+    alert('hello');
     },
+  //    this.saveToLocalStorage();
     //  createNewPlant(plant) {
     //    // adds a new plant to the array
     //    let newPlant = {
