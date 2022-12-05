@@ -1,7 +1,7 @@
 <template>
   <div class="container mt-5 mb-5" id="add">
     <h2 class="text-center mb-3">Add More Plants</h2>
-    <form class="form-plants" v-on:submit.prevent="$emit('create-new-plant', plant)"  @keydown.enter.prevent="">
+    <form class="form-plants" v-on:submit.prevent="add()"  @keydown.enter.prevent="">
       <label for="name">Name of your Plant*</label>
       <input type="text" id="name" v-model="plant.newName" name="name" placeholder="Whats the name of your plant?"/>
       <label for="location">House Location of your Plant*</label>
@@ -49,7 +49,15 @@ export default {
       }
     };
   },
-  methods: {},
+  methods: {
+    add() {
+      this.$emit("create-new-plant", this.plant);
+      this.plant.newName = "";
+      this.plant.newLocation = "";
+      this.plant.newSelected = "";
+      this.plant.newDescription = "";
+    },
+  },
   computed: {},
 };
 </script>
