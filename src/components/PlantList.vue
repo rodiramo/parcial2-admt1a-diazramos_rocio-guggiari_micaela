@@ -144,4 +144,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0px;
+}
+</style>
