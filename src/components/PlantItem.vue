@@ -1,30 +1,26 @@
 <template>
-  <div class="col-12 col-md-4 mb-3">
-    <div class="card container-plant p-3 border h-100">
-      <img v-bind:src='img' style="height: 70%; border-radius: 20rem 20rem 0 0;"/>
-      <div class="card-body">
-        <h3 class="card-title">{{ name }}</h3>
-        <div class="list-group">
-          <div class="title-card">
-            <h4>House Location:</h4>
-            <p class="list-group-item">{{ location }}</p>
-          </div>
-          <div  class="title-card">
-            <h4>Type of Plant: </h4>
-            <p class="list-group-item">{{ selected }}  </p>
-          </div>       
-          <div class="title-card">
-            <h4>Description:</h4>
-            <p class="list-group-item">{{ description }}</p>
-          </div>
-        </div>
-        <button class="button button-delete" @click="emitDeletePlant">
-          <i class="bx bx-trash-alt"></i>Delete
-        </button>
-      </div>
-    </div>
-  </div>
+  <v-card class="card" max-width="400">
+    <v-img  class="text-white " height="500" v-bind:src='img' cover >
+      <v-card-title> {{ name }} </v-card-title>
+    </v-img>
+
+    <v-card-subtitle class="pt-4">
+      Type of Plant: {{ selected }} 
+    </v-card-subtitle>
+
+    <v-card-text>
+      <div>House Location: {{ location }}</div>
+      <div>Description: {{ description }}</div>
+    </v-card-text>
+
+    <v-card-actions>
+      <v-btn class="button-delete" @click="emitDeletePlant">
+        <v-icon>mdi-trash-can</v-icon> Delete
+      </v-btn>
+    </v-card-actions>
+  </v-card>
 </template>
+
 
 <script>
 export default {
@@ -58,40 +54,32 @@ export default {
 </script>
 
 <style scoped>
-/* items plants */
 .button-delete {
-  border: 2px solid red;
+  border: 2px solid #b71c1cc2;
   background: white;
-  color: red;
+  color: #b71c1cc2;
   transition: all 250ms;
+  text-transform: unset;
 }
 .button-delete:hover {
   background: #e55757;
   color: white;
 }
-.card-title {
-  color: green;
-  border-bottom: 2px solid #9fcbca;
-  margin-bottom: 2rem;
+.card{
+  margin-bottom: 20px;
 }
-.container-plant {
-  border-radius: 10rem 10rem 0 0;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
+.v-card__title{
+  background: #ffffff8a;
+  width: 47vw;
+  color: black;
 }
-.title-card h4 {
-  color: #fff;
-  opacity: 0.7;
-  font-size: 1.25rem;
-  font-family: "Josefin Sans", sans-serif;
-  font-style: italic;
+.v-card__actions{
+  justify-content: center;
 }
-.list-group-item {
-  background: #b9d4d4;
-  font-size: 1.35rem;
-  padding: 1rem;
-  border-radius: 2rem;
+
+@media screen and (max-width: 768px) {
+  .v-card__title{
+    width: 100%;
+  }
 }
-</style>
+</style> 

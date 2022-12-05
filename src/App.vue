@@ -1,6 +1,11 @@
 <template>
   <div id="app">
     <nav id="nav">
+      <ul>
+        <li><a href="#plants" class="plant-link button-secondary">My Plants</a></li>
+        <li><a href="#add" class="plant-link button-secondary">Add Plants</a></li>
+        <li><a href="#tasks" class="button-secondary plant-link">My Tasks</a></li>
+      </ul>
       <!-- header -->
       <header>
         <HelloWorld/>
@@ -8,6 +13,15 @@
     </nav>
     <plant-list/>
     <to-do-list/>
+    <footer class="d-flex flex-column align-items-center p-2">
+      <a href="#nav" class="m-3 h3">
+        <h3>Your Garden</h3>
+      </a>
+      <p class="text-white">&copy; 
+        Este trabajo fue hecho por Micaela Giuggiari y Rocio Diaz Ramos,
+        para la materia Aplicaciones para Dispositivos Mobiles.
+      </p>
+    </footer>
   </div>
 </template>
 
