@@ -26,6 +26,7 @@ export default {
 </script>
 
 <style lang="scss">
+/*default*/
 @font-face {
   font-family: "Great Warrior-Personal use";
   src: url("./fonts/GreatWarriorPersonaluse.woff2") format("woff2"),
@@ -34,7 +35,6 @@ export default {
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "Caviar Dreams";
   src: url("./fonts/CaviarDreams-Bold.woff2") format("woff2"),
@@ -43,7 +43,6 @@ export default {
   font-style: normal;
   font-display: swap;
 }
-
 #app {
   font-family: "Caviar Dreams", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -57,8 +56,8 @@ export default {
   );
   overflow-x: hidden;
 }
-/*my plants*/
 
+/*my plants*/
 form label {
   display: block;
   text-align: center;
