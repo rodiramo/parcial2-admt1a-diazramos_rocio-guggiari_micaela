@@ -37,7 +37,7 @@ export default {
       plants: [
         {
           id: 1,
-          img: "./assets/planta-lavanda.jpg",
+          img: "./imgs/planta-lavanda.jpg",
           name: "Lavender",
           location: "The bedroom",
           description: "Next to the bed",
@@ -45,7 +45,7 @@ export default {
         },
         {
           id: 2,
-          img:"./assets/planta-orquidea.jpg",
+          img:"./imgs/planta-orquidea.jpg",
           name: "Orchid",
           location: "Kitchen",
           description: "Next to the spice rack",
@@ -53,7 +53,7 @@ export default {
         },
         {
           id: 3,
-          img:"./assets/planta-ficus.jpg",
+          img:"./imgs/planta-ficus.jpg",
           name: "The Big One",
           location: "Livingroom",
           description: "Next to the speaker",
@@ -92,7 +92,7 @@ export default {
     deletePlant(index) {
       console.log(index);
       this.plants.splice(index, 1);
-      localStorage.removeItem('plants');    
+      this.saveToLocalStorage();   
     },
     add(plant) {
       let newPlant = {
