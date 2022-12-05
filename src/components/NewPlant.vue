@@ -1,7 +1,7 @@
 <template>
   <div class="container mt-5 mb-5" id="add">
     <h2 class="text-center mb-3">Add More Plants</h2>
-    <form class="form-plants" v-on:submit.prevent="$emit('create-new-plant', plant)"  @keydown.enter.prevent="$emit('emitNewPlant', plant)">
+    <form class="form-plants" v-on:submit.prevent="$emit('create-new-plant', plant)"  @keydown.enter.prevent="">
       <label for="name">Name of your Plant*</label>
       <input
         type="text"
@@ -25,8 +25,7 @@
         placeholder="Anything in particular about this plant you want to remember?"
       ></textarea>
       <div class="d-flex justify-content-center">
-        <button @click="$emit('create-new-plant', plant)">Add Plant</button>
-      </div>
+        <input type="submit" value="Add Plant">      </div>
       <p>*these are required fields, please fill them before submiting</p>
     </form>
   </div>
@@ -36,21 +35,17 @@
 export default {
   name: "NewPlant",
   components: "",
-  props:"plant",
+  
   data() {
     return {
       plant: {
         newName: "",
         newLocation: "",
-        newDescription: ""
+        newDescription: "",
       }
      };
   },
-  methods: { 
-   // emitCreatePlant() {
-   //   this.$emit("create-new-plant");
-   // },
-  },
+  methods: {},
   computed: {},
 };
 </script>

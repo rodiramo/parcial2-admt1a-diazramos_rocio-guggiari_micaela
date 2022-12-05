@@ -1,6 +1,7 @@
 <template>
   <div class="col-12 col-md-4 mb-3">
     <div class="card container-plant p-3 border h-100">
+      <img v-bind:src='img' style="height: 70%; border-radius: 20rem 20rem 0 0;"/>
       <div class="card-body">
         <h3 class="card-title">{{ name }}</h3>
         <div class="list-group">
@@ -28,7 +29,7 @@ export default {
     "name",
     "location",
     "description",
-   // "img",
+    "img",
    // "alt",
    // "selected",
     "id",
@@ -71,13 +72,13 @@ export default {
 }
 .container-plant {
   border-radius: 10rem 10rem 0 0;
-  background-color: #fff;
+  background-color: rgb(162, 162, 162);
   display: flex;
   flex-direction: column;
   padding: 2rem;
 }
 .title-card h4 {
-  color: green;
+  color: #fff;
   opacity: 0.7;
   font-size: 1.25rem;
   font-family: "Josefin Sans", sans-serif;

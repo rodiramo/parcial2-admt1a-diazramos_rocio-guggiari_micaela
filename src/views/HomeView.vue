@@ -1,15 +1,6 @@
 <template>
-  <hello-world />
+<div>
+  <h1>Hola</h1>
+</div>
+
 </template>
-
-<script>
-import HelloWorld from "../components/HelloWorld";
-
-export default {
-  name: "HomeView",
-
-  components: {
-    HelloWorld,
-  },
-};
-</script>
