@@ -1,0 +1,5 @@
+Alumnas: Diaz Ramos, Rocio y Guggiari, Micaela 
+Año: 2022
+Cuatrimestre: 2º
+Profesor: Medina, Sergio
+Repo: https://github.com/rodiramo/parcial2-admt1a-diazramos_rocio-guggiari_micaela

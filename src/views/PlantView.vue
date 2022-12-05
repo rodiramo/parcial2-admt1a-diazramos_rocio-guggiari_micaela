@@ -1,5 +1,5 @@
 <template>
-  <plant-list />
+  <plant-list/>
 </template>
 
 <script>

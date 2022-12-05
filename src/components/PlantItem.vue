@@ -9,6 +9,10 @@
             <h4>House Location:</h4>
             <p class="list-group-item">{{ location }}</p>
           </div>
+          <div  class="title-card">
+            <h4>Type of Plant: </h4>
+            <p class="list-group-item">{{ selected }}  </p>
+          </div>       
           <div class="title-card">
             <h4>Description:</h4>
             <p class="list-group-item">{{ description }}</p>
@@ -31,7 +35,7 @@ export default {
     "description",
     "img",
    // "alt",
-   // "selected",
+    "selected",
     "id",
     "index",
   ],
@@ -41,7 +45,7 @@ export default {
         name: "",
         location: "",
         description: "",
-     //   selected: "",
+        selected: "",
       },
     };
   },
@@ -72,7 +76,7 @@ export default {
 }
 .container-plant {
   border-radius: 10rem 10rem 0 0;
-  background-color: rgb(162, 162, 162);
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   padding: 2rem;
