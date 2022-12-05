@@ -79,7 +79,7 @@ export default {
 
 @media screen and (max-width: 768px) {
   .v-card__title{
-    width: 100%;
+    width: 72vw;
   }
 }
 </style> 
