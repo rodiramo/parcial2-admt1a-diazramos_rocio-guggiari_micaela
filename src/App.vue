@@ -1,19 +1,23 @@
 <template>
   <div id="app">
     <nav id="nav">
-      <ul>
-        <li><a href="#plants" class="plant-link button-secondary">My Plants</a></li>
-        <li><a href="#add" class="plant-link button-secondary">Add Plants</a></li>
-        <li><a href="#tasks" class="button-secondary plant-link">My Tasks</a></li>
+      <ul class="nav-bar">
+        <li><a href="#plants"  color="primary">My Plants</a></li>
+        <li><a href="#add"  color="primary">Add Plants</a></li>
+        <li><a href="#tasks"  color="primary">My Tasks</a></li>
       </ul>
       <!-- header -->
       <header>
         <HelloWorld/>
       </header>
     </nav>
+    <div class="shape-bg"></div>
+    <div class="shape-img-bg"></div>
+    <div class="shape3"></div>
+    <div class="shape"></div>
     <plant-list/>
     <to-do-list/>
-    <footer class="d-flex flex-column align-items-center p-2">
+    <footer>
       <a href="#nav" class="m-3 h3">
         <h3>Your Garden</h3>
       </a>
@@ -70,209 +74,89 @@ export default {
   );
   overflow-x: hidden;
 }
-
-/*my plants*/
-form label {
-  display: block;
-  text-align: center;
-  font-size: 1.2em;
+/*navigation*/
+.nav-bar a{
+  text-decoration: none;
+  color:orange;
+  font-family: 'Great Warrior-Personal use', 'Josefin Sans', sans-serif;
+  font-size: 1.5rem;
 }
-.button,
-input,
-textarea,
-select {
-  line-height: 2em;
-  border-radius: 2rem;
-  border: 0;
-  display: inline-block;
-  margin: 20px 0;
-  padding: 0.2em 1em;
-  font-size: 1em;
+.nav-bar{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 2rem;
+  align-items: center;
+  margin-bottom: 0;
+  background: #ffffff42;
 }
-input[type="text"] {
-  min-width: 80%;
-  transition: all ease-in 0.25s;
+.nav-bar ul li a{
+  text-decoration: none;
+  transition: all 0.5s;
+  font-size: 1.5rem;
 }
-input:focus {
-  outline: none;
+.nav-bar a:hover{
+  text-decoration: none;
+  color: #024F4E;
+  transition: all 0.5s;
+  font-size: 1.5rem;
 }
-textarea:focus {
-  outline: none;
-}
-input::placeholder {
-  color: #024f4e;
-  font-style: italic;
-}
-textarea::placeholder {
-  color: #024f4e;
-  font-style: italic;
-}
-.button {
-  text-align: center;
-  font-weight: bold;
-  cursor: pointer;
-  border-style: solid;
-}
-.button-plant-add {
-  float: right;
-  background-color: #e55757;
-  transition: all 200ms;
-}
-.button-plant-add:hover {
-  color: #fff;
-  background-color: #052323;
-}
-.button-add {
-  border: 2px solid #fff;
-  border-radius: 2rem;
-  background-color: #e99b4d9f;
-  color: #ffff;
-  pointer-events: none;
-  transition: all ease-in 0.25s;
-  font-size: 2.2em;
-  line-height: 0.5em;
-  padding: 0.3em 0.3em;
-  float: right;
-}
-.button-add.active {
-  background: #b9d4d4;
-  pointer-events: visible;
-}
-.button-add.active:hover {
-  background: var(--sec-color);
-}
-.button-add:active {
-  transform: scale(0.95);
-}
-.control-buttons {
+// shapes
+.shape-bg{
+  background: #4eaeab86;
+  top: 15%;
+  height: 400px;
+  left: -10%;
+  transform: rotate(-90deg);
+  opacity: 5;
+  border-radius: 0rem 150rem 0rem 150rem;
   position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  text-align: center;
-}
-.button-secondary {
-  display: inline-block;
-  position: relative;
-  border: 0;
-  margin: -10px 10px;
-}
-.button-secondary:after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 1.5px;
-  background-color: var(--sec-color);
-  bottom: 0px;
-  left: 0;
-  transition: all ease-in 0.25s;
-}
-.button-secondary:hover:after {
-  width: 100%;
-}
-ul.todo-list {
-  padding: 0;
-  margin-bottom: 30px;
-}
-ul.todo-list li {
-  position: relative;
-  list-style-type: none;
-  display: block;
-  margin: 10px 0;
-  border: none;
-  cursor: default;
-  border-bottom: 1px solid #fff;
-  border-radius: 0.25rem;
-  padding: 12px 38px 12px 49px;
+  width: 400px;
   overflow: hidden;
 }
-ul.todo-list li:hover {
-  border-top: 1px solid #fff;
-  background-color: #ff6b019f;
-}
-ul.todo-list.archived li {
-  background-color: #ff56016c;
-}
-.todo-text {
-  position: relative;
-  display: inline-block;
-  padding: 0 0.5em;
-}
-ul.todo-list li .delete {
+.shape{
+  background-color: #032033c7;
   position: absolute;
-  height: 100%;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  cursor: pointer;
-  opacity: 0;
-  width: 0;
-  background-color: var(--main-color);
-  color: #fff;
-  transition: all ease-in 0.25s;
+  top: 10%;
+  left: 80%;
+  border-radius: 0rem 50rem 0rem 50rem;
+  height: 436px;
+  width: 440px;
 }
-ul.todo-list li .delete:after {
+.shape2{
+  background-color: #4eaeab86;
+  z-index: -1;
   position: absolute;
-  content: "x";
-  width: 10px;
-  height: 16px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.5);
-  transition: all ease-in 0.25s;
+  top: -10%;
+  left: 60%;
+  border-radius: 100rem 0 100rem 0rem;
+  height: 500px;
+  width: 400px;
 }
-ul.todo-list li:hover .delete {
-  width: 44px;
-  border-radius: 2rem 0 0rem 2rem;
-  opacity: 1;
-}
-ul.todo-list li:hover .delete:after {
-  transform: translate(-50%, -50%) scale(1);
-}
-.todo-checkbox {
+.shape3{
+  background-color: #4eaeab86;
   position: absolute;
-  display: none;
+  top: 8%;
+  left: 86%;
+  transform: rotate(182deg);
+  border-radius: 100rem 0 100rem 0rem;
+  height: 500px;
+  width: 400px;
 }
-.todo-checkbox + label {
+.shape-img-bg {
+  background: #49b67e;
+  top: 35%;
+  height: 206px;
+  left: -5%;
+  opacity: 0.75;
+  border-radius: 0rem 150rem 0rem 150rem;
+  transform: rotate(-10deg);
   position: absolute;
-  cursor: pointer;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 22px;
-  height: 22px;
-  border-radius: 2rem;
-  background-color: #fff;
+  width: 364px;
+  overflow: hidden;
 }
-.todo-checkbox:checked + label:after {
-  position: absolute;
-  content: "";
-  top: 30%;
-  left: 50%;
-  height: 3px;
-  width: 6px;
-  border: solid #052323;
-  border-width: 0 0 2px 2px;
-  transform-origin: center center;
-  transform: rotate(-45deg) translate(-50%, -50%);
-}
-.todo-checkbox:checked + label:after {
-  display: block;
-}
-.todo-checkbox:checked ~ .todo-text {
-  color: var(--dark-color);
-  text-decoration: line-through;
-}
-.todo-item-enter-active,
-.todo-item-leave-active {
-  transition: opacity ease 0.25s, transform ease-in-out 0.3s;
-  transform-origin: left center;
-}
-.slide-fade-enter-active,
-.slide-fade-leave-active {
-  transition: all 0.3s ease;
-}
+
+
 /* add plants */
 #add h2 {
   color: black;
@@ -293,28 +177,42 @@ ul.todo-list li:hover .delete:after {
 select {
   padding: 1rem;
 }
-/*footer*/
-footer {
-  background: var(--dark-color);
-  color: var(--white);
-  bottom: 0;
-  right: 0;
-  left: 0;
-  position: relative;
-}
 
-/* media querys*/
-@media screen and (max-width: 768px) {
-  .shape,
-  .shape-img-bg,
-  .shape-bg,
-  .shape2,
-  .shape3,
-  .shape-orange,
-  .shape-left,
-  .shape-accent {
+// footer
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background: #011a19;
+}
+footer a{
+  text-decoration: none;
+  color: #FFC804;
+  font-family: 'Great Warrior-Personal use', 'Josefin Sans', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: .5px;
+}
+footer a:hover{
+  color: #49b67e;
+}
+footer a h3{
+  padding-bottom: 0.5em;
+  padding-top: .5em;
+}
+footer p{
+  color: #fff;
+  padding-bottom: 1em;
+  letter-spacing: .5px;
+}
+@media screen and (max-width: 1500px) {
+  .shape-bg, .shape, .shape2, .shape3, .shape-img-bg {
     display: none;
   }
+}
+/* media querys*/
+@media screen and (max-width: 768px) {
+  
   nav {
     background: rgb(5, 35, 35);
     background: radial-gradient(
@@ -327,16 +225,11 @@ footer {
     color: var(--white);
     text-align: center;
   }
+  .nav-bar{background: none;}
   .line {
     height: 1.5px;
     width: 500px;
     background: #fff;
-  }
-  nav ul li a {
-    color: var(--white) !important;
-  }
-  nav ul li a:hover {
-    color: var(--accent-color) !important;
   }
   .todo-wrapper,
   .form-plants {
