@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <div class="container mt-5 mb-5" id="add">
     <h2 class="text-center mb-3">Add More Plants</h2>
     <form class="form-plants" v-on:submit.prevent="add()"  @keydown.enter.prevent="">
@@ -8,7 +8,7 @@
       <input type="text" v-model="plant.newLocation" name="family" placeholder="In what area of the house is your plant?"/>
       <label for="type"> Type of Plant: </label>
       <select v-model="plant.newSelected">
-        <option value="" disabled>--Please choose an option--</option>
+        <option value="" disabled>--Please choose an option-- <v-icon>mdi-arrow-down-drop-circle-outline</v-icon></option>
         <option value="Unkwown">Unknown</option>
         <option value="Calathea">Calathea</option>
         <option value="Orchid">Orchid</option>
@@ -32,23 +32,7 @@
       <p>*these are required fields, please fill them before submiting</p>
     </form>
   </div>
-</template> -->
-<template>
-  <v-form ref="form">
-    <v-text-field  :counter="10"  label="Name" required></v-text-field>
-    <v-text-field  label="E-mail" required></v-text-field>
-    <v-select
-      v-model="select"
-      label="Select"
-      :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
-      variant="underlined"
-    ></v-select>
-    <!-- <v-btn color="success" class="mr-4" @click="validate">
-      Validate
-    </v-btn> -->
-    
-  </v-form>
-</template>
+</template> 
 
 <script>
 export default {
@@ -76,4 +60,39 @@ export default {
   computed: {},
 };
 </script>
-<style></style>
+<style>
+#add{
+  margin-top: 4rem;
+}
+#add h2{
+  color: #FFC804;
+  margin-bottom: 1rem;
+}
+.form-plants{
+  background: rgba(239,168,41,0.4);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 2rem;
+}
+.form-plants input, select{
+  padding: 1rem;
+  border-bottom: 1px solid black;
+  border-radius: 0px;
+}
+
+#add textarea{
+  border-bottom: 1px solid black;
+  border-radius: 0px;
+}
+
+#add div input{
+  background: #fff;
+  color: #024F4E;
+  border-radius: 2em;
+  padding: 3px 20px;
+}
+</style>
