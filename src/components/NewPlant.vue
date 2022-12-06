@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="container mt-5 mb-5" id="add">
     <h2 class="text-center mb-3">Add More Plants</h2>
     <form class="form-plants" v-on:submit.prevent="add()"  @keydown.enter.prevent="">
@@ -32,13 +32,28 @@
       <p>*these are required fields, please fill them before submiting</p>
     </form>
   </div>
+</template> -->
+<template>
+  <v-form ref="form">
+    <v-text-field  :counter="10"  label="Name" required></v-text-field>
+    <v-text-field  label="E-mail" required></v-text-field>
+    <v-select
+      v-model="select"
+      label="Select"
+      :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+      variant="underlined"
+    ></v-select>
+    <!-- <v-btn color="success" class="mr-4" @click="validate">
+      Validate
+    </v-btn> -->
+    
+  </v-form>
 </template>
 
 <script>
 export default {
   name: "NewPlant",
   components: "",
-  
   data() {
     return {
       plant: {
@@ -46,7 +61,7 @@ export default {
         newLocation: "",
         newSelected: "",
         newDescription: "",
-      }
+      },
     };
   },
   methods: {
@@ -61,5 +76,4 @@ export default {
   computed: {},
 };
 </script>
-
 <style></style>
