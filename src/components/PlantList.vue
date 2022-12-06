@@ -1,6 +1,6 @@
 <template>
   <div id="plants" class="mb-5 mt-5">
-    <h2 class="text-center mb-3">My Plants</h2>
+    <h2 class="text-center">My Plants</h2>
     <div class="container text-center">
       <div class="row">
         <!--plant item-->
@@ -151,4 +151,8 @@ export default {
   justify-content: space-around;
   margin: 0px;
 }
+#plants{
+  margin-top:4em;
+}
+h2{margin-bottom: 1em;}
 </style>
