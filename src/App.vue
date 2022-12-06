@@ -155,29 +155,6 @@ export default {
   width: 364px;
   overflow: hidden;
 }
-
-
-/* add plants */
-#add h2 {
-  color: black;
-}
-.form-plants {
-  background: var(--main-color);
-  color: var(--white);
-  -webkit-box-shadow: -4px 16px 25px 1px rgba(239, 168, 41, 0.4);
-  box-shadow: -4px 16px 25px 1px rgba(239, 168, 41, 0.4);
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  width: 80%;
-  margin: 0 auto;
-  border-radius: 2rem;
-}
-.form-plants input,
-select {
-  padding: 1rem;
-}
-
 // footer
 footer{
   display: flex;
@@ -205,12 +182,12 @@ footer p{
   padding-bottom: 1em;
   letter-spacing: .5px;
 }
+/* media querys*/
 @media screen and (max-width: 1500px) {
   .shape-bg, .shape, .shape2, .shape3, .shape-img-bg {
     display: none;
   }
 }
-/* media querys*/
 @media screen and (max-width: 768px) {
   
   nav {
