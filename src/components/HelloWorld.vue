@@ -12,7 +12,7 @@
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          Hey You, this is your Online Garden.
+          <span>Hey You,</span> this is your Online Garden.
         </h1>
 
         <p class="subheading font-weight-regular">
@@ -26,7 +26,16 @@
 <script>
 export default {
   name: "HelloWorld",
-
   data: () => ({}),
 };
 </script>
+
+<style>
+h1{
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+h1 span {
+  color: orange;
+}
+</style>
