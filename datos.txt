@@ -1,5 +1,7 @@
-Alumnas: Diaz Ramos, Rocio y Guggiari, Micaela 
-Año: 2022
-Cuatrimestre: 2º
-Profesor: Medina, Sergio
+Alumnas: Diaz Ramos, Rocio y Guggiari, Micaela. 
+Año: 2022.
+Carrera: Diseño y Desarrollo Web.
+Materia: Aplicaciones para dispositivos moviles.
+Cuatrimestre: 3º
+Profesor: Medina, Sergio Daniel.
 Repo: https://github.com/rodiramo/parcial2-admt1a-diazramos_rocio-guggiari_micaela
